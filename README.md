@@ -72,6 +72,7 @@ resources:
 ```yaml
 - type: 'custom:lg-remote-control'
   entity: media_player.tv_lg_55c8
+  ir_power_switch_entity: scene.power_on_tv # optional
 ```
 
 ### Main Options
@@ -79,6 +80,7 @@ resources:
 | -------------- | ----------- | ------------ | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type` | string | **Required** | `custom:lg-remote-control` | Type of the card |
 | `entity` | string | **Required** |  | tv entity |
+| `ir_power_switch_entity` | string | **Optional** |  | alternate **scene** (instead of default service `media_player toggle`) to toggle tv power on/off. For example scene created using IR remote S06Pro (smartlife app): "scene.power_on_tv" |
 | `colors` | string | **Option** |  | list of color options |
 | `channels` |  | **Option**|  | list of channel in popup |
 | `sources` |  | **Option**|  | list of custom app. if not set, default apps will be displayed |
